@@ -1,0 +1,25 @@
+{
+	"name": "async-iter-immediate",
+	"version": "1.0.0",
+	"description": "pass through a stream while calling setImmediate() or other functions between iterations",
+	"main": "async-iter-immediate.js",
+	"scripts": {
+		"test": "node -r esm .test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://archive.eldergods.com/async-iter-immediate"
+	},
+	"keywords": [],
+	"author": "jauntywunderkind",
+	"license": "MIT",
+	"module": "async-iter-immediate.js",
+	"esm": true,
+	"dependencies": {
+		"p-immediate": "^3.1.0"
+	},
+	"devDependencies": {
+		"esm": "^3.2.25",
+		"tape": "^4.11.0"
+	}
+}
