@@ -21,3 +21,12 @@ export {
 	immediate as asyncIterImmediate,
 	immediate as AsyncIterImmediate
 }
+
+export function makeImmediate( makeIterator){
+	return async function *( delay= PImmediate){
+		yield* immediate( makeIterator(), delay)
+	}
+}
+export {
+	makeImmediate as MakeImmediate
+}
