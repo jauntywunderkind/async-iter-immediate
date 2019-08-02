@@ -10,8 +10,9 @@ export async function* immediate( inp, delay= PImmediate){
 	let cursor= await iter.next()
 	while( cursor&& !cursor.done){
 		yield cursor.value;
-		cursor= await iter.next()
+		cursor= iter.next()
 		delay()
+		cursor= await cursor
 	}
 	return cursor&& cursor.value
 }
