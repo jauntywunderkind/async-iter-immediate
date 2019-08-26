@@ -11,7 +11,7 @@ export async function* immediate( inp, delay= PImmediate){
 	while( cursor&& !cursor.done){
 		yield cursor.value;
 		cursor= iter.next()
-		delay()
+		await delay()
 		cursor= await cursor
 	}
 	return cursor&& cursor.value
